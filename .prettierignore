@@ -1,0 +1,9 @@
+node_modules
+public
+src/thirdparty
+modules
+build
+.storybook
+tests
+tailwindcss
+.github
