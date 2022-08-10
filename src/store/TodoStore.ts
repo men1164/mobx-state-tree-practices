@@ -14,9 +14,9 @@ const Todo = types
     },
   }))
 
-export const TodoList = types.model({ todoList: types.array(Todo) }).actions((self) => ({
-  addTodo(name: string) {
-    self.todoList.push({ name })
+export const TodoList = types.model({ todoList: types.map(Todo) }).actions((self) => ({
+  addTodo(id: string, name: string) {
+    self.todoList.set(id, { name })
   },
 }))
 

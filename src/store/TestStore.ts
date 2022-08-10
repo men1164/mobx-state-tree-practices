@@ -14,7 +14,7 @@ export type StoreInstance = Instance<typeof RootStore>
 
 export const store = RootStore.create({
   users: { userList: [{ name: 'men' }, { name: 'yoyoyo' }] },
-  todos: { todoList: [{ name: 'buy coffee' }, { name: 'buy food' }] },
+  todos: { todoList: { '1': { name: 'buy coffee' }, '2': { name: 'buy food' } } },
 })
 
 onSnapshot(store, (snapshot) => {
